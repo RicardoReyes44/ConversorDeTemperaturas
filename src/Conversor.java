@@ -10,6 +10,10 @@ public class Conversor extends JFrame{
 	
 	public Conversor() {
 		
+		getContentPane().setLayout(gbl);
+		setTitle("Conversor de temperaturas");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
 		
 	}
 
