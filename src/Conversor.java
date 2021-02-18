@@ -14,6 +14,7 @@ public class Conversor extends JFrame{
 		setTitle("Conversor de temperaturas");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
+		setResizable(false);
 		
 		pack();
 		setLocationRelativeTo(null);
