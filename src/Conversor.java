@@ -28,6 +28,9 @@ public class Conversor extends JFrame{
 		gbc.gridheight = height;
 		gbc.gridwidth = width;
 		
+		gbl.setConstraints(componente, gbc);
+		add(componente);
+		
 	}
 
 }
