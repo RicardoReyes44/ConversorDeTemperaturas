@@ -23,6 +23,10 @@ public class Conversor extends JFrame{
 	
 	public void alinear(int x, int y, int width, int height, Component componente) {
 
+		gbc.gridx = x;
+		gbc.gridy = y;
+		gbc.gridheight = height;
+		gbc.gridwidth = width;
 		
 	}
 
