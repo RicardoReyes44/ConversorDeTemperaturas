@@ -8,7 +8,8 @@ public class Conversor extends JFrame{
 	GridBagConstraints gbc = new GridBagConstraints();
 	
 	JLabel lbl1 = new JLabel("Convertir: ");
-	JTextField txt1 = new JTextField(5);
+	JLabel lbl2 = new JLabel("A: ");
+	JTextField txt1 = new JTextField(3);
 	
 	Font fuente = new Font("Calibri", 1, 20);
 
