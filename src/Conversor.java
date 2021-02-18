@@ -22,7 +22,9 @@ public class Conversor extends JFrame{
 		setResizable(false);
 		
 		lbl1.setFont(fuente);
-		
+		txt1.setOpaque(false);
+		txt1.setBorder(null);
+
 		// ------------------------------------------------
 		
 		alinear(0, 0, 1, 1, lbl1);
