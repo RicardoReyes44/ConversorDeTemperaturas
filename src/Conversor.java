@@ -23,6 +23,7 @@ public class Conversor extends JFrame{
 		setResizable(false);
 		
 		lbl1.setForeground(Color.gray);
+		lbl2.setForeground(Color.gray);
 		txt1.setOpaque(false);
 		txt1.setFont(fuente);
 
@@ -32,6 +33,7 @@ public class Conversor extends JFrame{
 
 		alinear(1, 0, 1, 1, txt1);
 		
+		alinear(0, 1, 1, 1, lbl2);
 		
 		// ------------------------------------------------
 		
