@@ -7,7 +7,8 @@ public class Conversor extends JFrame{
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
 	
-	JLabel lbl1 = new JLabel("Convertir: ");;
+	JLabel lbl1 = new JLabel("Convertir: ");
+	JTextField txt1 = new JTextField(5);
 	
 	Font fuente = new Font("Calibri", 1, 20);
 
@@ -25,6 +26,8 @@ public class Conversor extends JFrame{
 		// ------------------------------------------------
 		
 		alinear(0, 0, 1, 1, lbl1);
+
+		alinear(1, 0, 1, 1, txt1);
 		
 		
 		// ------------------------------------------------
