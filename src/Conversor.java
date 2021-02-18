@@ -15,6 +15,9 @@ public class Conversor extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
 		
+		pack();
+		setLocationRelativeTo(null);
+		
 	}
 
 }
