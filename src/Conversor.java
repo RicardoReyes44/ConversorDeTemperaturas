@@ -6,6 +6,10 @@ public class Conversor extends JFrame{
 	
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
+	
+	JLabel lbl1 = new JLabel("Convertir: ");;
+	
+	Font fuente = new Font("Calibri", 1, 20);
 
 	
 	public Conversor() {
@@ -16,10 +20,12 @@ public class Conversor extends JFrame{
 		setVisible(true);
 		setResizable(false);
 		
+		lbl1.setFont(fuente);
+		
 		// ------------------------------------------------
 		
-		JLabel lbl1 = new JLabel("Convertir: ");
 		alinear(0, 0, 1, 1, lbl1);
+		
 		
 		// ------------------------------------------------
 		
