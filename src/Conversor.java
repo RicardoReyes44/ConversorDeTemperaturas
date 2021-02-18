@@ -23,7 +23,6 @@ public class Conversor extends JFrame{
 		
 		lbl1.setFont(fuente);
 		txt1.setOpaque(false);
-		txt1.setBorder(null);
 
 		// ------------------------------------------------
 		
