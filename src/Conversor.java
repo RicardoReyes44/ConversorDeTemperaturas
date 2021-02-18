@@ -20,5 +20,10 @@ public class Conversor extends JFrame{
 		setLocationRelativeTo(null);
 		
 	}
+	
+	public void alinear(int x, int y, int width, int height, Component componente) {
+
+		
+	}
 
 }
