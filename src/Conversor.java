@@ -21,8 +21,9 @@ public class Conversor extends JFrame{
 		setVisible(true);
 		setResizable(false);
 		
-		lbl1.setFont(fuente);
+		lbl1.setForeground(Color.gray);
 		txt1.setOpaque(false);
+		txt1.setFont(fuente);
 
 		// ------------------------------------------------
 		
