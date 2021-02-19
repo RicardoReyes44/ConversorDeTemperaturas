@@ -11,6 +11,7 @@ public class Conversor extends JFrame{
 	JLabel lbl2 = new JLabel("A: ");
 	JLabel lbl3 = new JLabel("=");
 	JTextField txt1 = new JTextField(3);
+	JTextField txt2 = new JTextField(3);
 	
 	Font fuente = new Font("Calibri", 1, 20);
 
@@ -27,6 +28,9 @@ public class Conversor extends JFrame{
 		lbl2.setForeground(Color.gray);
 		txt1.setOpaque(false);
 		txt1.setFont(fuente);
+		
+		gbc.ipadx = 10;
+		gbc.ipady = 10;
 
 		// ------------------------------------------------
 		
@@ -35,6 +39,8 @@ public class Conversor extends JFrame{
 		alinear(1, 0, 1, 1, txt1);
 		
 		alinear(0, 1, 1, 1, lbl2);
+		
+		alinear(2, 1, 1, 1, lbl3);
 		
 		// ------------------------------------------------
 		
