@@ -110,7 +110,11 @@ public class Conversor extends JFrame implements ActionListener{
         	}
 			
 		}
-		
+			
+	}
+	
+	
+	public void convertir(String base, String conversion) {
 		
 	}
 
