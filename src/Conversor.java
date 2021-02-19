@@ -14,7 +14,7 @@ public class Conversor extends JFrame implements ActionListener{
 	JLabel lbl1 = new JLabel("Convertir: ");
 	JLabel lbl2 = new JLabel("A: ");
 	JLabel lbl3 = new JLabel("=");
-	JTextField txt1 = new JTextField();
+	JFormattedTextField txt1;
 	JTextField txt2 = new JTextField(3);
 	
 	String vectorEstados[] = {"*Centigrados", "*Fahrenheit", "*Kelvin", "*Rankine"};
@@ -32,6 +32,15 @@ public class Conversor extends JFrame implements ActionListener{
 		setVisible(true);
 		setResizable(false);
 		
+		MaskFormatter mascara;
+		try {
+			mascara = new MaskFormatter("####");
+			txt1 = new JFormattedTextField(mascara);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		lbl1.setForeground(Color.gray);
 		lbl1.setHorizontalAlignment(JTextField.CENTER);
 		lbl2.setForeground(Color.gray);
@@ -65,6 +74,8 @@ public class Conversor extends JFrame implements ActionListener{
 		gradosEntrada.addActionListener(this);
 		gradosSalida.addActionListener(this);
 		
+		txt1.setFocusLostBehavior(JFormattedTextField.COMMIT);
+		
 		pack();
 		setLocationRelativeTo(null);
 		
@@ -86,41 +97,48 @@ public class Conversor extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-
-        if(arg0.getSource()==gradosEntrada || arg0.getSource()==gradosSalida) {
+		
+		String texto = txt1.getText();
+		
+		System.out.println(texto);
+		
+		if(arg0.getSource()==gradosEntrada && !texto.equals("    ")
+	        || arg0.getSource()==gradosSalida && !texto.equals("    ")) {
 			
-        	String opcion = (String)gradosEntrada.getSelectedItem();
-        	String opcion2 = (String)gradosSalida.getSelectedItem();
-        	
-        	if(!opcion.equals(opcion2)) {
-        	
-        		convertir(opcion, opcion2);
-        		
-        	}else {
-        		txt2.setText("x.X");
-        	}
+			texto=texto.replace(" ", "");
 			
+	       	String opcion = (String)gradosEntrada.getSelectedItem();
+	       	String opcion2 = (String)gradosSalida.getSelectedItem();
+	        	
+	        if(!opcion.equals(opcion2)) {
+	        	
+	       		convertir(opcion, opcion2, texto);
+	        		
+	       	}else {
+	       		txt2.setText("x.X");
+	       	}
+				
 		}
 			
 	}
 	
 	
-	public void convertir(String base, String conversion) {
+	public void convertir(String base, String conversion, String texto) {
 
 		if(base.equals("*Centigrados")) {
-			realizarOperacion(base, conversion);
+			realizarOperacion(base, conversion, texto);
 		}else if(base.equals("*Fahrenheit")) {
-			realizarOperacion(base, conversion);
+			realizarOperacion(base, conversion, texto);
 		}else if(base.equals("*Kelvin")) {
-			realizarOperacion(base, conversion);
+			realizarOperacion(base, conversion, texto);
 		}else {
-			realizarOperacion(base, conversion);
+			realizarOperacion(base, conversion, texto);
 		}
 		
 	}
 
 
-	public void realizarOperacion(String base, String conversion) {
+	public void realizarOperacion(String base, String conversion, String texto) {
 
 		int grados;
 		
@@ -130,16 +148,18 @@ public class Conversor extends JFrame implements ActionListener{
         	
 		}else if(base.equals("*Fahrenheit")) {
 			
-			grados = (Integer.parseInt(txt1.getText())*(9/5))+32;
+			grados = (Integer.parseInt(texto)*9/5)+32;
         	txt2.setText(String.valueOf(grados));
 			
 		}else if(base.equals("*Kelvin")) {
 			
-			
+			grados = (Integer.parseInt(texto)*9/5)+32;
+        	txt2.setText(String.valueOf(grados));
 			
 		}else if(base.equals("*Rankine")) {
 			
-			
+			grados = (int)(Integer.parseInt(texto)+273.15);
+        	txt2.setText(String.valueOf(grados));
 			
 		}
 		
