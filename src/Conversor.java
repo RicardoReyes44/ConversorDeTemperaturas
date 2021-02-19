@@ -25,10 +25,14 @@ public class Conversor extends JFrame{
 		setResizable(false);
 		
 		lbl1.setForeground(Color.gray);
+		lbl1.setHorizontalAlignment(JTextField.CENTER);
 		lbl2.setForeground(Color.gray);
 		txt1.setHorizontalAlignment(JTextField.CENTER);
 		txt1.setOpaque(false);
 		txt1.setFont(fuente);
+		txt2.setHorizontalAlignment(JTextField.CENTER);
+		txt2.setOpaque(false);
+		txt2.setFont(fuente);
 		
 		gbc.ipadx = 20;
 
