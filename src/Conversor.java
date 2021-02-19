@@ -13,7 +13,7 @@ public class Conversor extends JFrame{
 	JTextField txt1 = new JTextField(3);
 	JTextField txt2 = new JTextField(3);
 	
-	String vectorEstados[] = {"Centigrados", "Fahrenheit", "Kelvin", "Rankine"};
+	String vectorEstados[] = {"*Centigrados", "*Fahrenheit", "*Kelvin", "*Rankine"};
 	JComboBox <String> gradosEntrada = new JComboBox<String>(vectorEstados);
 	
 	Font fuente = new Font("Calibri", 1, 20);
@@ -50,6 +50,8 @@ public class Conversor extends JFrame{
 		alinear(2, 1, 1, 1, lbl3);
 		
 		alinear(3, 1, 1, 1, txt2);
+		
+		alinear(3, 0, 1, 1, gradosEntrada);
 		
 		// ------------------------------------------------
 		
