@@ -1,5 +1,8 @@
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.*;
+import java.text.ParseException;
 
 
 public class Conversor extends JFrame{
@@ -10,7 +13,7 @@ public class Conversor extends JFrame{
 	JLabel lbl1 = new JLabel("Convertir: ");
 	JLabel lbl2 = new JLabel("A: ");
 	JLabel lbl3 = new JLabel("=");
-	JTextField txt1 = new JTextField(3);
+	JFormattedTextField txt1;
 	JTextField txt2 = new JTextField(3);
 	
 	String vectorEstados[] = {"*Centigrados", "*Fahrenheit", "*Kelvin", "*Rankine"};
@@ -28,15 +31,26 @@ public class Conversor extends JFrame{
 		setVisible(true);
 		setResizable(false);
 		
+		MaskFormatter mascara;
+		try {
+			mascara = new MaskFormatter("####");
+			txt1 = new JFormattedTextField(mascara);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		lbl1.setForeground(Color.gray);
 		lbl1.setHorizontalAlignment(JTextField.CENTER);
 		lbl2.setForeground(Color.gray);
 		txt1.setHorizontalAlignment(JTextField.CENTER);
 		txt1.setOpaque(false);
 		txt1.setFont(fuente);
+		txt1.setPreferredSize(new Dimension(70, 25));
 		txt2.setHorizontalAlignment(JTextField.CENTER);
 		txt2.setOpaque(false);
 		txt2.setFont(fuente);
+		txt2.setEditable(false);
 
 		// ------------------------------------------------
 		
