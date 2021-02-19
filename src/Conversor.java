@@ -37,8 +37,6 @@ public class Conversor extends JFrame{
 		txt2.setHorizontalAlignment(JTextField.CENTER);
 		txt2.setOpaque(false);
 		txt2.setFont(fuente);
-		
-		gbc.ipadx = 20;
 
 		// ------------------------------------------------
 		
@@ -46,13 +44,15 @@ public class Conversor extends JFrame{
 
 		alinear(1, 0, 1, 1, txt1);
 		
+		alinear(1, 1, 1, 1, gradosSalida);
+		
 		alinear(0, 1, 1, 1, lbl2);
 		
 		alinear(2, 1, 1, 1, lbl3);
 		
 		alinear(3, 1, 1, 1, txt2);
 		
-		alinear(3, 0, 1, 1, gradosEntrada);
+		alinear(2, 0, 1, 1, gradosEntrada);
 		
 		// ------------------------------------------------
 		
