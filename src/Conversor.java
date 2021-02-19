@@ -117,6 +117,21 @@ public class Conversor extends JFrame implements ActionListener{
 	public void convertir(String base, String conversion) {
 
 		if(base.equals("*Centigrados")) {
+			realizarOperacion(base, conversion);
+		}else if(base.equals("*Fahrenheit")) {
+			realizarOperacion(base, conversion);
+		}else if(base.equals("*Kelvin")) {
+			realizarOperacion(base, conversion);
+		}else {
+			realizarOperacion(base, conversion);
+		}
+		
+	}
+
+
+	public void realizarOperacion(String base, String conversion) {
+
+        if(base.equals("*Centigrados")) {
 			
 		}else if(base.equals("*Fahrenheit")) {
 			
@@ -125,12 +140,6 @@ public class Conversor extends JFrame implements ActionListener{
 		}else if(base.equals("*Rankine")) {
 			
 		}
-		
-	}
-	
-	public void realizarOperacion(String base, String conversion) {
-
-		
 		
 	}
 
