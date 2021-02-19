@@ -2,10 +2,12 @@ import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.ParseException;
 
 
-public class Conversor extends JFrame{
+public class Conversor extends JFrame implements ActionListener{
 	
 	GridBagLayout gbl = new GridBagLayout();
 	GridBagConstraints gbc = new GridBagConstraints();
@@ -85,6 +87,13 @@ public class Conversor extends JFrame{
 		
 		gbl.setConstraints(componente, gbc);
 		add(componente);
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 
