@@ -26,11 +26,11 @@ public class Conversor extends JFrame{
 		
 		lbl1.setForeground(Color.gray);
 		lbl2.setForeground(Color.gray);
+		txt1.setHorizontalAlignment(JTextField.CENTER);
 		txt1.setOpaque(false);
 		txt1.setFont(fuente);
 		
-		gbc.ipadx = 10;
-		gbc.ipady = 10;
+		gbc.ipadx = 20;
 
 		// ------------------------------------------------
 		
@@ -41,6 +41,8 @@ public class Conversor extends JFrame{
 		alinear(0, 1, 1, 1, lbl2);
 		
 		alinear(2, 1, 1, 1, lbl3);
+		
+		alinear(3, 1, 1, 1, txt2);
 		
 		// ------------------------------------------------
 		
