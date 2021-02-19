@@ -9,6 +9,7 @@ public class Conversor extends JFrame{
 	
 	JLabel lbl1 = new JLabel("Convertir: ");
 	JLabel lbl2 = new JLabel("A: ");
+	JLabel lbl3 = new JLabel("=");
 	JTextField txt1 = new JTextField(3);
 	
 	Font fuente = new Font("Calibri", 1, 20);
