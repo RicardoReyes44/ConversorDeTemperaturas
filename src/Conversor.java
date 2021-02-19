@@ -13,6 +13,8 @@ public class Conversor extends JFrame{
 	JTextField txt1 = new JTextField(3);
 	JTextField txt2 = new JTextField(3);
 	
+	String vectorEstados[] = {"Centigrados", "Fahrenheit", "Kelvin", "Rankine"};
+	
 	Font fuente = new Font("Calibri", 1, 20);
 
 	
