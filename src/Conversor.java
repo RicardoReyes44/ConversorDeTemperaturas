@@ -1,6 +1,5 @@
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -60,7 +59,7 @@ public class Conversor extends JFrame implements ActionListener{
 
 		alinear(1, 0, 1, 1, txt1);
 		
-		alinear(1, 1, 1, 1, gradosSalida);
+		alinear(1, 1, 1, 1, gradosEntrada);
 		
 		alinear(0, 1, 1, 1, lbl2);
 		
@@ -68,9 +67,12 @@ public class Conversor extends JFrame implements ActionListener{
 		
 		alinear(3, 1, 1, 1, txt2);
 		
-		alinear(2, 0, 1, 1, gradosEntrada);
+		alinear(2, 0, 1, 1, gradosSalida);
 		
 		// ------------------------------------------------
+		
+		gradosEntrada.addActionListener(this);
+		gradosSalida.addActionListener(this);
 		
 		pack();
 		setLocationRelativeTo(null);
@@ -93,7 +95,7 @@ public class Conversor extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
