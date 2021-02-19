@@ -103,7 +103,7 @@ public class Conversor extends JFrame implements ActionListener{
         	
         	if(!opcion.equals(opcion2)) {
         	
-        		
+        		convertir(opcion, opcion2);
         		
         	}else {
         		txt2.setText("x.X");
