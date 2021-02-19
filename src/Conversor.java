@@ -15,7 +15,7 @@ public class Conversor extends JFrame implements ActionListener{
 	JLabel lbl2 = new JLabel("A: ");
 	JLabel lbl3 = new JLabel("=");
 	JFormattedTextField txt1;
-	JTextField txt2 = new JTextField(3);
+	JTextField txt2 = new JTextField(5);
 	
 	String vectorEstados[] = {"*Centigrados", "*Fahrenheit", "*Kelvin", "*Rankine"};
 	JComboBox <String> gradosEntrada = new JComboBox<String>(vectorEstados);
@@ -51,7 +51,6 @@ public class Conversor extends JFrame implements ActionListener{
 		txt2.setHorizontalAlignment(JTextField.CENTER);
 		txt2.setOpaque(false);
 		txt2.setFont(fuente);
-		txt2.setEditable(false);
 
 		// ------------------------------------------------
 		
@@ -59,7 +58,7 @@ public class Conversor extends JFrame implements ActionListener{
 
 		alinear(1, 0, 1, 1, txt1);
 		
-		alinear(1, 1, 1, 1, gradosEntrada);
+		alinear(1, 1, 1, 1, gradosSalida);
 		
 		alinear(0, 1, 1, 1, lbl2);
 		
@@ -67,7 +66,7 @@ public class Conversor extends JFrame implements ActionListener{
 		
 		alinear(3, 1, 1, 1, txt2);
 		
-		alinear(2, 0, 1, 1, gradosSalida);
+		alinear(2, 0, 1, 1, gradosEntrada);
 		
 		// ------------------------------------------------
 		
@@ -122,15 +121,85 @@ public class Conversor extends JFrame implements ActionListener{
 	
 	
 	public void convertir(String base, String conversion, String texto) {
-
+		
+		double grados;
+		
 		if(base.equals("*Centigrados")) {
 			
+			if(conversion.equals("*Fahrenheit")) {
+				
+				grados = (Integer.parseInt(texto)*9/5)+32;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else if(conversion.equals("*Kelvin")) {
+				
+				grados = (Integer.parseInt(texto)+273.15);
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else {
+				
+				grados = (Integer.parseInt(texto)*9/5+491.67);
+	        	txt2.setText(String.valueOf(grados));
+				
+			}
+			
 		}else if(base.equals("*Fahrenheit")) {
-
+            
+            if(conversion.equals("*Centigrados")) {
+				
+				grados = (Integer.parseInt(texto)-32) * 5/9;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else if(conversion.equals("*Kelvin")) {
+				
+				grados = (Integer.parseInt(texto)-32) * 5/9 + 273.15;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else {
+				
+				grados = Integer.parseInt(texto)+459.67;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}
+			
 		}else if(base.equals("*Kelvin")) {
-
+			
+            if(conversion.equals("*Fahrenheit")) {
+				
+				grados = (Integer.parseInt(texto)- 273.15) * 9/5 + 32;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else if(conversion.equals("*Rankine")) {
+				
+				grados = Integer.parseInt(texto)*1.8;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else {
+				
+				grados = Integer.parseInt(texto)-273.15;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}
+			
 		}else {
-
+			
+            if(conversion.equals("*Fahrenheit")) {
+				
+				grados = Integer.parseInt(texto) - 459.67;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else if(conversion.equals("*Kelvin")) {
+				
+				grados = Integer.parseInt(texto) * 5/9;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}else {
+				
+				grados = (Integer.parseInt(texto) - 491.67) * 5/9;
+	        	txt2.setText(String.valueOf(grados));
+				
+			}
+			
 		}
 		
 	}
