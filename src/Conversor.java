@@ -96,6 +96,21 @@ public class Conversor extends JFrame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		
+        if(arg0.getSource()==gradosEntrada || arg0.getSource()==gradosSalida) {
+			
+        	String opcion = (String)gradosEntrada.getSelectedItem();
+        	String opcion2 = (String)gradosSalida.getSelectedItem();
+        	
+        	if(!opcion.equals(opcion2)) {
+        	
+        		
+        		
+        	}else {
+        		txt2.setText("x.X");
+        	}
+			
+		}
+		
 		
 	}
 
