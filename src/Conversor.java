@@ -100,8 +100,6 @@ public class Conversor extends JFrame implements ActionListener{
 		
 		String texto = txt1.getText();
 		
-		System.out.println(texto);
-		
 		if(arg0.getSource()==gradosEntrada && !texto.equals("    ")
 	        || arg0.getSource()==gradosSalida && !texto.equals("    ")) {
 			
@@ -126,41 +124,13 @@ public class Conversor extends JFrame implements ActionListener{
 	public void convertir(String base, String conversion, String texto) {
 
 		if(base.equals("*Centigrados")) {
-			realizarOperacion(base, conversion, texto);
+			
 		}else if(base.equals("*Fahrenheit")) {
-			realizarOperacion(base, conversion, texto);
+
 		}else if(base.equals("*Kelvin")) {
-			realizarOperacion(base, conversion, texto);
+
 		}else {
-			realizarOperacion(base, conversion, texto);
-		}
-		
-	}
 
-
-	public void realizarOperacion(String base, String conversion, String texto) {
-
-		int grados;
-		
-        if(base.equals("*Centigrados")) {
-			
-        	
-        	
-		}else if(base.equals("*Fahrenheit")) {
-			
-			grados = (Integer.parseInt(texto)*9/5)+32;
-        	txt2.setText(String.valueOf(grados));
-			
-		}else if(base.equals("*Kelvin")) {
-			
-			grados = (Integer.parseInt(texto)*9/5)+32;
-        	txt2.setText(String.valueOf(grados));
-			
-		}else if(base.equals("*Rankine")) {
-			
-			grados = (int)(Integer.parseInt(texto)+273.15);
-        	txt2.setText(String.valueOf(grados));
-			
 		}
 		
 	}
