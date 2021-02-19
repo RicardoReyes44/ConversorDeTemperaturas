@@ -14,6 +14,7 @@ public class Conversor extends JFrame{
 	JTextField txt2 = new JTextField(3);
 	
 	String vectorEstados[] = {"Centigrados", "Fahrenheit", "Kelvin", "Rankine"};
+	JComboBox <String> gradosEntrada = new JComboBox<String>(vectorEstados);
 	
 	Font fuente = new Font("Calibri", 1, 20);
 
