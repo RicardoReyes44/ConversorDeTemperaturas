@@ -14,7 +14,7 @@ public class Conversor extends JFrame implements ActionListener{
 	JLabel lbl1 = new JLabel("Convertir: ");
 	JLabel lbl2 = new JLabel("A: ");
 	JLabel lbl3 = new JLabel("=");
-	JFormattedTextField txt1;
+	JTextField txt1 = new JTextField();
 	JTextField txt2 = new JTextField(3);
 	
 	String vectorEstados[] = {"*Centigrados", "*Fahrenheit", "*Kelvin", "*Rankine"};
@@ -32,15 +32,6 @@ public class Conversor extends JFrame implements ActionListener{
 		setVisible(true);
 		setResizable(false);
 		
-		MaskFormatter mascara;
-		try {
-			mascara = new MaskFormatter("####");
-			txt1 = new JFormattedTextField(mascara);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 		lbl1.setForeground(Color.gray);
 		lbl1.setHorizontalAlignment(JTextField.CENTER);
 		lbl2.setForeground(Color.gray);
@@ -95,7 +86,7 @@ public class Conversor extends JFrame implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		
+
         if(arg0.getSource()==gradosEntrada || arg0.getSource()==gradosSalida) {
 			
         	String opcion = (String)gradosEntrada.getSelectedItem();
@@ -131,13 +122,24 @@ public class Conversor extends JFrame implements ActionListener{
 
 	public void realizarOperacion(String base, String conversion) {
 
+		int grados;
+		
         if(base.equals("*Centigrados")) {
 			
+        	
+        	
 		}else if(base.equals("*Fahrenheit")) {
+			
+			grados = (Integer.parseInt(txt1.getText())*(9/5))+32;
+        	txt2.setText(String.valueOf(grados));
 			
 		}else if(base.equals("*Kelvin")) {
 			
+			
+			
 		}else if(base.equals("*Rankine")) {
+			
+			
 			
 		}
 		
